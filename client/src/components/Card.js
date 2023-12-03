@@ -13,19 +13,18 @@ const Cardd = ({post}) => {
       <Card.Text>
         {post.first_name} {post.last_name}
       </Card.Text>
-      <Card.Text>
-        {post.email}
-      </Card.Text>
+       
       <Card.Text>
         {post.gender}
       </Card.Text>
-      <Card.Text>
-        {post.domain}
-      </Card.Text>
+      
       <Card.Text>
       Available: {post.available ? 'Yes' : 'No'}      
       </Card.Text>
+      <Button variant="primary">View Profile</Button>
+      <p></p>
       <Button variant="primary">Add to Team</Button>
+
     </Card.Body>
   </Card>
   )
