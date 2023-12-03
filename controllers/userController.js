@@ -12,7 +12,14 @@ const getAllUser = async (req, res) => {
         const pages = Math.ceil(total / pageSize);
 
         const query = await query1.skip(skip).limit(pageSize);
-        console.log(query)
+        //console.log(query)
+
+        if (page > pages) {
+            return res.status(404).json({
+              status: "fail",
+              message: "No page found",
+            });
+          }
          
         const result = await query;
 
