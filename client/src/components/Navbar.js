@@ -21,7 +21,7 @@ function Navbarr() {
         <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">
       
-      <Badge bg="secondary">{10}<i class="bi bi-amd"></i></Badge>
+      <Badge bg="secondary">{10}</Badge>
       <SiTeamspeak />
 
       </Dropdown.Toggle>
