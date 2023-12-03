@@ -11,7 +11,7 @@ const Cardd = ({post}) => {
     <Card.Body>
       <Card.Title>{post.id}</Card.Title>
       <Card.Text>
-        {post.first_name}+{post.last_name}
+        {post.first_name} {post.last_name}
       </Card.Text>
       <Card.Text>
         {post.email}
