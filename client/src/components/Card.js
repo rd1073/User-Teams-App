@@ -23,7 +23,7 @@ const Cardd = ({post}) => {
         {post.domain}
       </Card.Text>
       <Card.Text>
-        Available:{post.availability}
+      Available: {post.available ? 'Yes' : 'No'}      
       </Card.Text>
       <Button variant="primary">Add to Team</Button>
     </Card.Body>
