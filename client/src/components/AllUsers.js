@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
  import { useNavigate, useParams } from 'react-router-dom';
 import Pagination from './Pagination';
-import Card from './Card';
+import Cardd from './Card';
 const AllUsers = ({ match }) => {
     const { pageNumber } = useParams();
 
@@ -46,7 +46,7 @@ const AllUsers = ({ match }) => {
           <Pagination page={page} pages={pages} changePage={setPage} />
           <div className="app__posts">
             {posts.map((post) => (
-              <Card key={post._id} post={post} />
+              <Cardd key={post._id} post={post} />
             ))}
           </div>
           <Pagination page={page} pages={pages} changePage={setPage} />
