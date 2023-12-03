@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from "react";
  import { useNavigate, useParams } from 'react-router-dom';
-
-
+import Pagination from './Pagination';
+import Card from './Card';
 const AllUsers = ({ match }) => {
     const { pageNumber } = useParams();
 
@@ -36,8 +36,22 @@ const AllUsers = ({ match }) => {
         fecthUsers();
       }, [page]);
   return (
-    <div>
-      
+    <div className="app">
+      {loading ? (
+        <h3 className="loading-text">Loading...</h3>
+      ) : error ? (
+        <h3 className="error-text">{error}</h3>
+      ) : (
+        <>
+          <Pagination page={page} pages={pages} changePage={setPage} />
+          <div className="app__posts">
+            {posts.map((post) => (
+              <Card key={post._id} post={post} />
+            ))}
+          </div>
+          <Pagination page={page} pages={pages} changePage={setPage} />
+        </>
+      )}
     </div>
   )
 }
