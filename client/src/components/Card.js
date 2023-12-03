@@ -7,7 +7,7 @@ const Cardd = ({post}) => {
   return (
      
     <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={post.avatar} />
+    <Card.Img variant="top" src={post.avatar} style={{ width: '100%', height: 'auto' }} />
     <Card.Body>
       <Card.Title>{post.id}</Card.Title>
       <Card.Text>
